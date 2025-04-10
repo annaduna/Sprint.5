@@ -24,3 +24,4 @@ class Locators:
     BUTTON_RECOVERY_PASSWORD = (By.XPATH, "//a[@class='Auth_link__1fOlj' and @href='/forgot-password']")  # Локатор кнопки "Восстановить пароль"
     BUTTON_LOGIN_FROM_RECOVERY = (By.XPATH, "//a[@class='Auth_link__1fOlj' and @href='/login']")  # Локатор кнопки "Войти" на странице восстановления пароля
     ORDER_BUTTON_LOCATOR = (By.XPATH,"//button[contains(@class, 'button_button__33qZ0') and contains(text(), 'Оформить заказ')]") # локатор для кнопки "Оформить заказ" на странице главной
+    SAVE_BUTTON = (By.XPATH, "// button[contains( @class , 'button_button__33qZ0') and contains(text(), 'Сохранить')]")
