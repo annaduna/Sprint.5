@@ -9,11 +9,10 @@ from locators import Locators
 
 class TestBunsSection:
     def test_click_buns_section(self,driver_chrome):
-        driver_chrome.find_element(*Locators.SAUCES_TAB).click()  # Кликаем на вкладку "Соусы"
-        WebDriverWait(driver_chrome, 10).until(expected_conditions.text_to_be_present_in_element_attribute(Locators.SAUCES_TAB,"class", "tab_tab_type_current__2BEPc"))  # ждем появления класса
+        driver_chrome.find_element(*Locators.SAUCES_TAB).click()
+        WebDriverWait(driver_chrome, 10).until(expected_conditions.text_to_be_present_in_element_attribute(Locators.SAUCES_TAB,"class", "tab_tab_type_current__2BEPc"))
         driver_chrome.find_element(*Locators.BUNS_TAB).click()
-        WebDriverWait(driver_chrome, 10).until(expected_conditions.text_to_be_present_in_element_attribute(Locators.BUNS_TAB, "class","tab_tab_type_current__2BEPc")) # Ждем, пока класс станет равен 'tab_tab_type_current__2BEPc' у вкладки "Булки"
-        # buns_tab_class_value = driver_chrome.find_element(*Locators.BUNS_TAB).get_attribute("class")
+        WebDriverWait(driver_chrome, 10).until(expected_conditions.text_to_be_present_in_element_attribute(Locators.BUNS_TAB, "class","tab_tab_type_current__2BEPc"))
         assert 'tab_tab_type_current__2BEPc' in driver_chrome.find_element(*Locators.BUNS_TAB).get_attribute("class")
 
 class TestSaucesSection:
