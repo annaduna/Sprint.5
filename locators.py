@@ -25,3 +25,12 @@ class Locators:
     BUTTON_LOGIN_FROM_RECOVERY = (By.XPATH, "//a[@class='Auth_link__1fOlj' and @href='/login']")  # Локатор кнопки "Войти" на странице восстановления пароля
     ORDER_BUTTON_LOCATOR = (By.XPATH,"//button[contains(@class, 'button_button__33qZ0') and contains(text(), 'Оформить заказ')]") # локатор для кнопки "Оформить заказ" на странице главной
     SAVE_BUTTON = (By.XPATH, "// button[contains( @class , 'button_button__33qZ0') and contains(text(), 'Сохранить')]")
+
+    CONSTRUCTOR = (By.XPATH, "//p[contains(@class, 'AppHeader_header__linkText__3q_va') and text()='Конструктор']") # Локатор для кнопки "конструктор" на странице "личный кабинет"
+
+    LOGOUT_BUTTON = (By.XPATH, "//button[contains(@class, 'Account_button__14Yp3') and text()='Выход']") # Локатор для кнопки "Выход" на странице "личный кабинет"
+
+        # Локаторы для проверки перехода между разделами в конструкторе
+    SAUCES_TAB = (By.XPATH,"//div[.='Соусы']") # Локатор для раздела "Соусы"
+    BUNS_TAB = (By.XPATH,"//div[.='Булки']") # Локатор для раздела "Булки"
+    FILLINGS_TAB = (By.XPATH,"//div[.='Начинки']") # Локатор для раздела "Начинки"
