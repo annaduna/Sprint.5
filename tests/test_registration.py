@@ -18,8 +18,6 @@ class TestRegistrationChrome:
         WebDriverWait(driver_chrome, 3).until(expected_conditions.element_to_be_clickable(Locators.BUTTON_LOGIN))
         assert driver_chrome.current_url == curl.url_login
 
-
-class TestRegistrationWIthInvalidPasswordChrome:
     def test_invalid_registration_chrome(self, driver_chrome):
         email = generate_email()
         driver_chrome.get(curl.url_registration)

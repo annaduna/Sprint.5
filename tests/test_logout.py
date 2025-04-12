@@ -7,7 +7,7 @@ import curl
 
 from locators import Locators
 
-# Выход по кнопке в личном кабинете
+
 class TestLogout:
     def test_logaut(self, driver_chrome, login):
         driver_chrome.find_element(*Locators.BUTTON_PERSONAL_CABINET).click()

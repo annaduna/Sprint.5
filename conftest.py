@@ -30,5 +30,3 @@ def login(driver_chrome):
     driver_chrome.find_element(*Locators.FIELD_PASSWORD_AUTHORIZATION).send_keys(data.PASSWORD)
     driver_chrome.find_element(*Locators.BUTTON_LOGIN).click()
     WebDriverWait(driver_chrome, 10).until(expected_conditions.element_to_be_clickable(Locators.ORDER_BUTTON_LOCATOR))
-    # return driver_chrome
-    # WebDriverWait(driver_chrome, 3).until(expected_conditions.element_to_be_clickable((By.XPATH,

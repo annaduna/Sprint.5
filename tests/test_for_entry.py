@@ -1,5 +1,3 @@
-
-
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 from conftest import driver_chrome
@@ -19,8 +17,6 @@ class TestLoginFunctionality:
         WebDriverWait(driver_chrome, 10).until(expected_conditions.element_to_be_clickable(Locators.ORDER_BUTTON_LOCATOR))
         assert driver_chrome.current_url == curl.main_site
 
-
-class TestLoginViaPersonalCabinet:
     def test_login(self, driver_chrome):
         driver_chrome.get(curl.main_site)
         driver_chrome.find_element(*Locators.BUTTON_PERSONAL_CABINET).click()
@@ -30,9 +26,7 @@ class TestLoginViaPersonalCabinet:
         driver_chrome.find_element(*Locators.BUTTON_LOGIN).click()
         WebDriverWait(driver_chrome, 10).until(expected_conditions.element_to_be_clickable(Locators.ORDER_BUTTON_LOCATOR))
         assert driver_chrome.current_url == curl.main_site
-#
-#
-class TestLoginViaRegistrationButton:
+
     def test_login(self, driver_chrome):
         driver_chrome.get(curl.url_registration)
         button_login_from_registration = driver_chrome.find_element(*Locators.BUTTON_LOGIN_FROM_REGISTRATION)
@@ -45,7 +39,6 @@ class TestLoginViaRegistrationButton:
         WebDriverWait(driver_chrome, 10).until(expected_conditions.element_to_be_clickable(Locators.ORDER_BUTTON_LOCATOR))
         assert driver_chrome.current_url == curl.main_site
 
-class TestLoginViaPasswordRecovery:
     def test_login_via_recovery_button(self, driver_chrome):
         driver_chrome.get(curl.url_login)
         recovery_button = driver_chrome.find_element(*Locators.BUTTON_RECOVERY_PASSWORD)
