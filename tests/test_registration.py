@@ -1,7 +1,5 @@
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
-from conftest import driver_chrome
-
 import curl
 import data
 from locators import Locators

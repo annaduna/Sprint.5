@@ -1,11 +1,7 @@
 
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
-from conftest import driver_chrome
-from conftest import login
-
 import curl
-
 from locators import Locators
 
 class TestTransitionToConstructor:
